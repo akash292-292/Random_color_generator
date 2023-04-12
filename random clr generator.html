@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>
+Random Color Generator;
+    </title>
+</head>
+<body>
+<div id="di" style="background-color:aliceblue;height:500px;width:auto;">
+<p>-Here You Can see the Color Rgb Code-</p>
+</div>
+<button id="Button1">Click To See The Color:</button>   
+<script>
+var x,y,z;
+var color ;
+
+ 
+
+ document.getElementById("Button1").onclick = 
+function(){
+    x=Math.round(Math.random())*256;
+    y=Math.round(Math.random())*256;
+    z=Math.round(Math.random())*256;
+    color= 'rgb('+x+','+y+' ,'+z+')';
+    x++;
+    x=x%256;
+    color1= 'rgb('+x+','+y+' ,'+z+')';
+
+ document.getElementById("di").style.backgroundColor
+= color;
+document.getElementById("Button1").style.backgroundColor
+= color1;
+document.getElementById("di").innerHTML='<p>rgb('+x+','+y+' ,'+z+')</p>';
+//document.write(color);
+ 
+ }
+</script>
+</body>
+
+
+</html>
