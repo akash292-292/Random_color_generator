@@ -5,18 +5,18 @@ Random Color Generator;
     </title>
 </head>
 <body>
-<div id="di" style="background-color:aliceblue;height:500px;width:auto;">
+<div id="DIV_ID" style="background-color:aliceblue;height:500px;width:auto;">
 <p>-Here You Can see the Color Rgb Code-</p>
 </div>
 <button id="Button1">Click To See The Color:</button>   
 <script>
 var x,y,z;
 var color ;
-
- 
-
- document.getElementById("Button1").onclick = 
+document.getElementById("Button1").onclick = 
 function(){
+    //Math.random() generates the value between 0-1
+    //Multiply by 256 to get value between 0-256
+    //Math.round() rounds the value to integer value through which we can get the color values.
     x=Math.round(Math.random())*256;
     y=Math.round(Math.random())*256;
     z=Math.round(Math.random())*256;
@@ -25,7 +25,7 @@ function(){
     x=x%256;
     color1= 'rgb('+x+','+y+' ,'+z+')';
 
- document.getElementById("di").style.backgroundColor
+ document.getElementById("DIV_ID").style.backgroundColor
 = color;
 document.getElementById("Button1").style.backgroundColor
 = color1;
